@@ -27,6 +27,13 @@ header{
     align-items: center;
     padding: 15px;
 }
+.header-logo {
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation-delay: 1s;
+    animation: bounce; 
+    animation-duration: 2s;
+  }
 
 ul li a:hover{
     opacity: 0.5;
@@ -68,15 +75,26 @@ main .productos-estrella{
     max-width: 1024px;
     margin: auto;
 }
-.productos-estrella-img img{
+
+.zoom {
+    transition: transform .2s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.5); 
+}
+
+div.productos-estrella-img img{
     width: 100%;
     height: auto;
 }
-.productos-estrella-img{
+
+div.productos-estrella-img{
     display: flex;
     max-width: 1024px;
     gap: 8px;
 }
+
 section h2:nth-child(1){
     grid-column: 1/4;
     grid-row: 1/2;
