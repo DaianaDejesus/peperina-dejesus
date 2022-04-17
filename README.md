@@ -1,0 +1,1 @@
+# peperina-dejesus Mejore los aspectos esteticos, centrado de las distintas pages, agregue y cambie tipografias, en productos agregue img, mejore la estetica de los botones, agregue los links de preguntas frecuentes y un texto en nuestra historia. Espero poder agregar una img en nuestra historia más adelante.
