@@ -8,7 +8,7 @@
     <title>Contactos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Courgette&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Courgette&family=Josefin+Sans:wght@100;400&family=Yeseva+One&display=swap" rel="stylesheet">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -36,7 +36,7 @@
                     <a class="nav-link" href="./productos.html">Productos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page"  href="./contactos.html">Contactos</a>
+                    <a class="nav-link" aria-current="page"  href="./contactos.html">Contactos</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./nuestra-historia.html">Nuestra historia</a>
@@ -51,9 +51,9 @@
     </header>
     <main>
         <section class="contactos">
-            <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
         </div>
         <div>
             <label for="email">Email</label>
@@ -78,7 +78,7 @@
             <input type="radio" name="clientes-peperina" value="2">
             <label for="clientes-peperina">No tengo aún objetos Peperina hogar."</label>
         </div>
-        <div>
+        <div class="comentarios">
             <h2>Comentarios</h2>
             <textarea name="comentarios" id="multi" cols="30" rows="10"></textarea>
         </div>
@@ -87,8 +87,8 @@
             <label for="newlestter">Deseo recibir novedades y ofertas.</label>
         </div>
         <div>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar todo">
+            <input class="boton" type="submit" value="Enviar">
+            <input class="boton" type="reset" value="Borrar todo">
         </div>
     </section>
     </main>

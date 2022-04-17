@@ -5,6 +5,9 @@
 }
 
 a:link, a:visited, a:active {
+    font-family: Josefin Sans, sans-serif;
+    font-size:14pt;
+    font-weight: 900;
     text-decoration:none;
     color: #f6264e;
 }
@@ -36,23 +39,15 @@ ul li a:hover{
 }
 
 .navbar-nav .nav-item .nav-link{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bolder;
+    font-family: Josefin Sans, sans-serif;
+    font-weight: 1000;
     color: #f6264e;
     font-size: 20px;
 }
 ul li{
     list-style-type: none;
     text-align: right;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
-}
-h1.nombre-de-page{
-    font-weight: bold;
-    text-align: right;
-    font-family: 'Yeseva One', cursive;
-    color: #f6264e;
-    font-size: 24px;
 }
 
 #carouselExampleFade{
@@ -107,63 +102,117 @@ section h2:nth-child(1){
 }
 
 h2{
-    font-family: "courgette";
+    font-family: "yeseva one";
     color: #f6264e;
     font-weight: 600;
     align-items:center;
     padding: 8px;
-    font-size: 20;
+    font-size: 20pt;
 }
 h3{
     font-family: "courgette";
     color: #f6264e;
     font-weight: 600;
     align-items:center;
-    padding: 8px;
-    font-size: 16;
+    padding: 20px;
+    font-size: 16pt;
 }
 p{
-    font-family: "courgette";
+    font-family: "belleza";
     color: #f6264e;
     font-weight: 600;
     align-items:center;
     padding: 8px;
     font-size: 14;
+    line-height: 150%;
+    
 }
-main .productos-img{
+.boton{
+    background-color: #f6264e;
+    font-family: josefin sans;
+    color: #ffffff;
+    font-size: 12pt;
+    padding: 3pt;
+}
+main section.search-filter{
+    font-family: "belleza";
+    padding: 15px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 8pt;
+}
+main section.productos-img{
     display: grid;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     justify-items: center;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: auto;
-    padding: 15px;
-    max-width: 1024px;
-}
-.productos-img{
-    display: flex;
-    max-width: 1024px;
+    padding: 30px;
     gap: 8px;
 }
-main section div.productos-img img{
+section.productos-img img{
+    display: flex;
+    flex-wrap: wrap;
+}
+main section.productos-img img{
     width: 100%;
     height: auto;
 }
 
 .contactos{
-    font-family: "courgette";
+    font-family: "belleza";
     color: #f6264e;
+    display: flex;
+    flex-direction: column;
     font-weight: 600;
     align-items:center;
-    padding: 12px;
+    padding: 17pt;
     font-size: 20;
 }
 .contactos div{
     display: flex;
     justify-content:center;
     align-content: center;
+    align-items: center;
     padding: 10px;
+    gap: 5pt;
+}
+div.comentarios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.nuestra-historia{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+}
+.links-de-preguntas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    font-weight: 800;
+}
+section.preguntas-frecuentes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 900px;
+    padding: 60px;
+    margin: auto;
 }
 .pie-de-pagina {
     text-align: center;
