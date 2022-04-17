@@ -263,6 +263,9 @@ footer div.menu__footer nav ul li{
     .contenedor{
         width: 100%;
     }
+    section.productos-estrella{
+        display: none;
+    }
 }
 @media (max-width: 1200px){
     body{
