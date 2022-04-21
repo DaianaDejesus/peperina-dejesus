@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-size: contain;
+  background-image: url(../assets/img/Fondo.png);
+  background-position: center center;
+  background-attachment: sticky;
+}
+
+.contenedor {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.navbar .navbar-brand {
+  margin: 0 0.5rem;
+  width: 50%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation: bounce;
+          animation: bounce;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.navbar .navbar-brand img {
+  width: 30%;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  font: bold 14pt "Josefin Sans";
+  color: #f6264e;
+  list-style-type: none;
+  text-align: right;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.5;
+}
+
+#carouselExampleFade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  max-width: 1024px;
+  margin: auto;
+}
+
+#carouselExampleFade img {
+  width: 100%;
+  height: auto;
+}
+
+.productos-estrella {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 15% 85%;
+      grid-template-rows: 15% 85%;
+  height: auto;
+  padding: 15px;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.productos-estrella h2 {
+  font: 600 18pt "Yeseva one";
+  color: #f6264e;
+  padding: 8px;
+}
+
+.productos-estrella h2:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.productos-estrella .productos-estrella-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1024px;
+  gap: 8px;
+}
+
+.productos-estrella .productos-estrella-img img.zoom {
+  width: 100%;
+  height: auto;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.productos-estrella .productos-estrella-img img.zoom:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+footer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  height: auto;
+}
+
+footer .pie-de-pagina {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer .menu__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3px;
+}
+
+footer .menu__footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .menu__footer nav ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  margin: 0 3px;
+  width: 100%;
+  max-width: 1024px;
+}
+
+footer .menu__footer nav ul a {
+  text-decoration: none;
+  font: bold 14pt "Josefin Sans";
+  color: #f6264e;
+}
+
+footer .menu__footer nav ul li a:hover {
+  opacity: 0.5;
+}
+
+footer .copy {
+  font-size: x-small;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+  position: -webkit-sticky;
+  position: sticky;
+  color: #f6264e;
+  font-weight: 600;
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  section.productos-estrella {
+    display: none;
+  }
+  footer {
+    width: 100%;
+  }
+  .contenedor {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+  }
+  .contenedor {
+    width: 100%;
+  }
+}

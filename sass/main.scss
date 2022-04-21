@@ -1,0 +1,187 @@
+$fontlinks:( bold 14pt "Josefin Sans");
+$fontcolor: (#f6264e);
+$fonttitle: (600 18pt "Yeseva one" );
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-size: contain;
+    background-image: url(../assets/img/Fondo.png);
+    background-position: center center;
+    background-attachment: sticky;
+}
+
+.contenedor{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.navbar{
+    & &-brand{
+    margin: 0 0.5rem;
+    width: 50%;
+    animation-delay: 1s;
+    animation: bounce; 
+    animation-duration: 2s;
+            }
+    & &-brand img{
+    width: 30%;
+            }
+    & &-nav .nav-item .nav-link{
+    font: $fontlinks;
+    color: $fontcolor;
+    list-style-type: none;
+    text-align: right;
+            }
+    .nav-link:hover{
+    opacity: 0.5;
+            }
+} 
+#carouselExampleFade{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1024px;
+    margin: auto;
+    img{
+    width: 100%;
+    height: auto;
+    }
+}
+
+.productos-estrella{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15% 85%;
+    height: auto;
+    padding: 15px;
+    max-width: 1024px;
+    margin: auto;
+
+    h2{
+    font: $fonttitle;
+    color: $fontcolor;
+    padding: 8px;
+
+        &:nth-child(1){
+        grid-column: 1/4;
+        grid-row: 1/2;
+        }    
+    }
+    & &-img{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        max-width: 1024px;
+        gap: 8px;
+
+    img.zoom{
+    width: 100%;
+    height: auto;
+    transition: transform .2s; 
+ 
+        &:hover {
+        transform: scale(1.5); 
+        }
+    }
+    }
+
+}
+
+footer{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    height: auto;
+    .pie-de-pagina {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .menu__footer{
+        display: flex;
+        justify-content: center;
+        padding: 3px;
+        & nav ul{
+            display: flex;
+            justify-content: center;
+            align-items:center;    
+            li{ 
+            align-items:center;
+            flex-direction: column;
+            list-style-type:none;
+            margin: 0 3px;
+            width: 100%;
+            max-width: 1024px;
+            }
+            a{
+            text-decoration:none;
+            font: $fontlinks;
+            color: $fontcolor;
+            }
+                & li a:hover{
+                opacity: 0.5;                    
+                }            
+        }
+    }
+    & .copy{
+    font-size: x-small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-self:flex-end;
+    justify-self:flex-end;
+    position:sticky ;
+    color: $fontcolor; 
+    font-weight: 600;       
+    }
+}
+
+@media (min-width: 360px) and (max-width: 767px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+    }
+    section.productos-estrella{
+    display: none;
+    }
+    footer{
+        width: 100%;
+    }
+    .contenedor{
+        width: 100%;
+    }
+}
+@media (max-width: 1200px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+    }
+    footer{
+        width: 100%;
+    }
+    .contenedor{
+        width: 100%;
+}
+}
+
