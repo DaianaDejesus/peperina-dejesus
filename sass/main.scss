@@ -1,6 +1,6 @@
 $fontlinks:( bold 14pt "Josefin Sans");
 $fontcolor: (#f6264e);
-$fonttitle: (600 18pt "Yeseva one" );
+$fonttitle: (600 18pt "belleza" );
 
 *{
     margin: 0;
@@ -69,6 +69,7 @@ body{
     margin: auto;
 
     h2{
+    background-color: #ffffff;
     font: $fonttitle;
     color: $fontcolor;
     padding: 8px;

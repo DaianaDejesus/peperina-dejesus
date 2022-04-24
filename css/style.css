@@ -12,7 +12,7 @@ a:link, a:visited, a:active {
     color: #f6264e;
 }
 body{
-    background-size: contain;
+    background-size: cover;
     background-image: url(../assets/img/Fondo.png);
     background-position: center center;
     background-attachment: sticky;
