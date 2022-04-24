@@ -1,10 +1,9 @@
 $fontlinks:( bold 14pt "Josefin Sans");
 $fontcolor: (#f6264e);
-$fonttitle: (600 18pt "Belleza" );
+$fonttitle: (600 19pt "Josefin Sans");
+$fontformularios: (15pt "Belleza");
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -14,6 +13,7 @@ body{
     background-image: url(../assets/img/Fondo.png);
     background-position: center center;
     background-attachment: sticky;
+    
 }
 
 .contenedor{
@@ -21,6 +21,7 @@ body{
     margin: 0 auto;
     overflow: hidden;
 }
+/* Comienza nav */
 
 .navbar{
     & &-brand{
@@ -43,6 +44,7 @@ body{
     opacity: 0.5;
             }
 } 
+/* Comienza carrousel del index */
 #carouselExampleFade{
     display:flex;
     justify-content: center;
@@ -55,7 +57,7 @@ body{
     height: auto;
     }
 }
-
+/* Comienza productos estrella del index */
 .productos-estrella{
     display: grid;
     justify-content: center;
@@ -63,6 +65,7 @@ body{
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 15% 85%;
+    width: 100%;
     height: auto;
     padding: 15px;
     max-width: 1024px;
@@ -72,7 +75,10 @@ body{
     background-color: #ffffff;
     font: $fonttitle;
     color: $fontcolor;
-    padding: 8px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 15px;
 
         &:nth-child(1){
         grid-column: 1/4;
@@ -83,8 +89,9 @@ body{
         display: flex;
         flex-direction:row;
         justify-content: space-between;
-        max-width: 1024px;
+        align-items: center;
         gap: 8px;
+        width: 98.5%;
 
     img.zoom{
     width: 100%;
@@ -98,7 +105,105 @@ body{
     }
 
 }
+/* Productos */
+main section.search-filter{
+    font-family: $fontlinks;
+    padding: 15px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 8pt;
+    margin: 0 30pt;
 
+    & h1{
+        font:$fonttitle;
+        color: $fontcolor;
+        text-align: left;
+        background-color: #ffffff;
+        width: 100%;
+        height: auto;
+        padding: 15pt;
+    }
+
+    & .boton{
+    background-color: #f6264e;
+    font-family: josefin sans;
+    color: #ffffff;
+    border-radius: 4pt;
+    border-color: #ffffff;
+    font-size: 12pt;
+    padding: 3pt;
+    }
+}
+main section.productos-img{
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: auto;
+    padding: 30px;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    & img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 98.5%;
+    height: auto;
+    }
+}
+/* Contactos */
+.contactos{
+    background-color:#ffffff9c;
+    margin: 20pt 100pt;
+    font-family: $fontformularios;
+    color: $fontcolor;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    align-items:stretch;
+    padding: 17pt;
+    
+    & h1{
+        font:$fonttitle;
+        color:$fontcolor;
+    }
+
+    & div{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 5pt;
+    
+        &.comentarios{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+    }
+}
+/* Nuestra historia */
+
+main.nuestra-historia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    width: 100%;
+    height: auto;
+    
+    & div.nuestra-historia-img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Comienza Footer */
 footer{
     background-color: #ffffff;
     display: flex;
@@ -151,6 +256,7 @@ footer{
 @media (min-width: 360px) and (max-width: 767px){
     body{
         width: 100%;
+        margin: 0;
     }
     header{
         width: 100%;
@@ -185,4 +291,3 @@ footer{
         width: 100%;
 }
 }
-
