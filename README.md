@@ -1,1 +1,1 @@
-# peperina-dejesus Mejore los aspectos esteticos, centrado de las distintas pages, agregue y cambie tipografias, en productos agregue img, mejore la estetica de los botones, agregue los links de preguntas frecuentes y un texto en nuestra historia. Espero poder agregar una img en nuestra historia más adelante.
+# peperina-dejesus El index tiene el estilo con SASS, no logre algunos detalles del responsive, el footer no me queda abajo pero no logro saber el por qué.
