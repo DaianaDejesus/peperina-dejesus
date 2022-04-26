@@ -1,7 +1,9 @@
-$fontlinks:( bold 14pt "Josefin Sans");
+$backgroundcolor:(#ffffff9c);
 $fontcolor: (#f6264e);
+$fontlinks:( bold 14pt "Josefin Sans");
 $fonttitle: (600 19pt "Josefin Sans");
 $fontformularios: (15pt "Belleza");
+$fontparrafo: (14pt "Josefin Sans");
 
 *{
     box-sizing: border-box;
@@ -156,7 +158,7 @@ main section.productos-img{
 }
 /* Contactos */
 .contactos{
-    background-color:#ffffff9c;
+    background-color: $backgroundcolor;
     margin: 20pt 100pt;
     font-family: $fontformularios;
     color: $fontcolor;
@@ -189,20 +191,98 @@ main section.productos-img{
 /* Nuestra historia */
 
 main.nuestra-historia{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1024px;
-    width: 100%;
-    height: auto;
-    
-    & div.nuestra-historia-img{
+        background-color: $backgroundcolor;
+        display: grid;
+        overflow-wrap: nowrap;
+        min-height: 100%;
         width: 100%;
-        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: auto;
+        max-width: 1024px;
+
+    & div.nuestra-historia-img{
+        width: auto;
+        max-height: 500px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        flex-grow: 1;
+        overflow: hidden;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    & .nuestra-historia-texto{
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        flex-grow: 1;
+        align-items: center;
+        padding: 8pt;
+        margin-top: 5pt;
+
+        & h1{
+            font: $fonttitle;
+            color: $fontcolor;
+        }
+        & p{
+            font: $fontparrafo;
+            color: $fontcolor;
+        }
+        & h3{
+            font: $fonttitle;
+            color: $fontcolor;
+        } 
     }
 }
+/* Comienza preguntas frecuentes */
+main.preguntas{
+    background-color: $backgroundcolor;
+    margin: 20pt 100pt;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    align-items:stretch;
+    padding: 17pt;
+    color: $fontcolor;
 
+    & section.links-de-preguntas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    font-weight: 800;
+    text-decoration: none;
+    font: $fontlinks;
+        & a{
+            text-decoration: none;
+            color: $fontcolor;
+            padding: 3pt;
+            &:hover{
+                opacity: 0.5;
+            }
+    
+        }
+    }
+
+    & section.preguntas-frecuentes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 900px;
+    padding: 60px;
+    margin: auto;
+    font:$fontparrafo;
+    }
+}   
 /* Comienza Footer */
 footer{
     background-color: #ffffff;
