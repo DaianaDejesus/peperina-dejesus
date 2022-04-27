@@ -17,8 +17,8 @@
 </head>
 
 <body>
+    <div class="container-fluid">
     <header>
-        <div class="contenedor">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand animate__animated animate__bounce" href="../index.html">
@@ -50,8 +50,8 @@
                 </div>
             </nav>
     </header>
-    <main>
-        <section class="search-filter">
+    <main class="container">
+        <section class="row search-filter">
             <h1>Productos</h1>
             <form action="search.php" method="get">
                 <input type="search" placeholder="Estoy buscando...">
@@ -67,7 +67,7 @@
                 </select>
             </form>
         </section>
-        <section class="productos-img">
+        <section class="row productos-img">
             <img src="../assets/img/curupi-amarilla.jpeg" alt="Maceta amarilla" title="Maceta amarilla" width="312,5"
                 height="312,5">
             <img src="../assets/img/curupi_roja.jpeg" alt="Maceta roja" title="Maceta roja" width="312,5"
@@ -87,8 +87,8 @@
             <img src="../assets/img/vela-madera-grande.jpeg" alt="Vela madera grande" title="Vela madera grande">
         </section>
     </main>
-    <footer>
-        <div class="pie-de-pagina">
+    <footer class="container-fluid">
+        <div class="col pie-de-pagina">
             <a href="https://www.facebook.com/ktgilliessurfacedesign" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" fill="#66d7d1">
                     <path
@@ -110,7 +110,7 @@
                         d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4z" />
                 </svg></a>
         </div>
-        <div class="menu__footer">
+        <div class="col menu__footer">
             <nav>
                 <ul>
                     <li>
@@ -149,5 +149,4 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

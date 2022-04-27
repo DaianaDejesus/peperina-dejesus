@@ -1,27 +1,31 @@
 $backgroundcolor:(#ffffff9c);
 $fontcolor: (#f6264e);
 $fontlinks:( bold 14pt "Josefin Sans");
-$fonttitle: (600 19pt "Josefin Sans");
+$fonttitle: (600 17pt "Josefin Sans");
 $fontformularios: (15pt "Belleza");
 $fontparrafo: (14pt "Josefin Sans");
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
 
 body{
     background-size: contain;
     background-image: url(../assets/img/fondo.png);
     background-position: center center;
     background-attachment: sticky;    
-}
-
-.contenedor{
     width: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    
+    & div.container-fluid{
+    padding: 0;
+    }
+
 }
+
+
 /* Comienza nav */
 
 .navbar{
@@ -238,36 +242,40 @@ main.nuestra-historia{
     }
 }
 /* Comienza preguntas frecuentes */
-main.preguntas{
+.preguntas{
     background-color: $backgroundcolor;
-    margin: 20pt 100pt;
     display: flex;
     flex-direction: column;
     font-weight: 600;
     align-items:stretch;
     padding: 17pt;
     color: $fontcolor;
-
+    
     & section.links-de-preguntas{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    align-items: stretch;
+    align-items:center;
     font-weight: 800;
     text-decoration: none;
     font: $fontlinks;
+        & h1 {
+            color: $fontcolor;
+            font: $fonttitle;
+            text-align: center;
+        }
         & a{
             text-decoration: none;
             color: $fontcolor;
             padding: 3pt;
+            text-align: center;
             &:hover{
                 opacity: 0.5;
             }
-    
         }
-    }
+        }
 
     & section.preguntas-frecuentes{
     display: flex;
@@ -291,6 +299,9 @@ footer{
     align-items: center;
     padding: 30px;
     height: auto;
+    position: relative;
+    bottom: 0;
+
     .pie-de-pagina {
         text-align: center;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -330,43 +341,4 @@ footer{
     color: $fontcolor; 
     font-weight: 600;       
     }
-}
-
-@media (min-width: 360px) and (max-width: 767px){
-    body{
-        width: 100%;
-        margin: 0;
-    }
-    header{
-        width: 100%;
-    }
-    main{
-        width: 100%;
-    }
-    section.productos-estrella{
-    display: none;
-    }
-    footer{
-        width: 100%;
-    }
-    .contenedor{
-        width: 100%;
-    }
-}
-@media (max-width: 1200px){
-    body{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-    }
-    main{
-        width: 100%;
-    }
-    footer{
-        width: 100%;
-    }
-    .contenedor{
-        width: 100%;
-}
 }

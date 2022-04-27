@@ -1,6 +1,8 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,12 +10,12 @@ body {
   background-image: url(../assets/img/fondo.png);
   background-position: center center;
   background-attachment: sticky;
-}
-
-.contenedor {
   width: 100%;
   margin: 0 auto;
-  overflow: hidden;
+}
+
+body div.container-fluid {
+  padding: 0;
 }
 
 /* Comienza nav */
@@ -88,7 +90,7 @@ body {
 
 .productos-estrella h2 {
   background-color: #ffffff;
-  font: 600 19pt "Josefin Sans";
+  font: 600 17pt "Josefin Sans";
   color: #f6264e;
   text-align: center;
   width: 100%;
@@ -154,7 +156,7 @@ main section.search-filter {
 }
 
 main section.search-filter h1 {
-  font: 600 19pt "Josefin Sans";
+  font: 600 17pt "Josefin Sans";
   color: #f6264e;
   text-align: left;
   background-color: #ffffff;
@@ -224,7 +226,7 @@ main section.productos-img img {
 }
 
 .contactos h1 {
-  font: 600 19pt "Josefin Sans";
+  font: 600 17pt "Josefin Sans";
   color: #f6264e;
 }
 
@@ -317,7 +319,7 @@ main.nuestra-historia .nuestra-historia-texto {
 }
 
 main.nuestra-historia .nuestra-historia-texto h1 {
-  font: 600 19pt "Josefin Sans";
+  font: 600 17pt "Josefin Sans";
   color: #f6264e;
 }
 
@@ -327,14 +329,13 @@ main.nuestra-historia .nuestra-historia-texto p {
 }
 
 main.nuestra-historia .nuestra-historia-texto h3 {
-  font: 600 19pt "Josefin Sans";
+  font: 600 17pt "Josefin Sans";
   color: #f6264e;
 }
 
 /* Comienza preguntas frecuentes */
-main.preguntas {
+.preguntas {
   background-color: #ffffff9c;
-  margin: 20pt 100pt;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -350,7 +351,7 @@ main.preguntas {
   color: #f6264e;
 }
 
-main.preguntas section.links-de-preguntas {
+.preguntas section.links-de-preguntas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,25 +366,32 @@ main.preguntas section.links-de-preguntas {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 800;
   text-decoration: none;
   font: bold 14pt "Josefin Sans";
 }
 
-main.preguntas section.links-de-preguntas a {
+.preguntas section.links-de-preguntas h1 {
+  color: #f6264e;
+  font: 600 17pt "Josefin Sans";
+  text-align: center;
+}
+
+.preguntas section.links-de-preguntas a {
   text-decoration: none;
   color: #f6264e;
   padding: 3pt;
+  text-align: center;
 }
 
-main.preguntas section.links-de-preguntas a:hover {
+.preguntas section.links-de-preguntas a:hover {
   opacity: 0.5;
 }
 
-main.preguntas section.preguntas-frecuentes {
+.preguntas section.preguntas-frecuentes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,6 +433,8 @@ footer {
           align-items: center;
   padding: 30px;
   height: auto;
+  position: relative;
+  bottom: 0;
 }
 
 footer .pie-de-pagina {
@@ -488,44 +498,4 @@ footer .copy {
   position: sticky;
   color: #f6264e;
   font-weight: 600;
-}
-
-@media (min-width: 360px) and (max-width: 767px) {
-  body {
-    width: 100%;
-    margin: 0;
-  }
-  header {
-    width: 100%;
-  }
-  main {
-    width: 100%;
-  }
-  section.productos-estrella {
-    display: none;
-  }
-  footer {
-    width: 100%;
-  }
-  .contenedor {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1200px) {
-  body {
-    width: 100%;
-  }
-  header {
-    width: 100%;
-  }
-  main {
-    width: 100%;
-  }
-  footer {
-    width: 100%;
-  }
-  .contenedor {
-    width: 100%;
-  }
 }
