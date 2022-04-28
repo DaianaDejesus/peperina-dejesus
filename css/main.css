@@ -192,11 +192,10 @@ main section.search-filter h1 {
 
 main section.search-filter .boton {
   background-color: #f6264e;
-  font-family: josefin sans;
+  font: 12pt josefin sans;
   color: #ffffff;
   border-radius: 4pt;
   border-color: #ffffff;
-  font-size: 12pt;
   padding: 3pt;
 }
 
@@ -268,6 +267,15 @@ main section.productos-img img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contactos div input.boton {
+  background-color: #f6264e;
+  font: 12pt josefin sans;
+  color: #ffffff;
+  border-radius: 4pt;
+  border-color: #ffffff;
+  padding: 3pt;
 }
 
 /* Nuestra historia */

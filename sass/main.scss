@@ -143,13 +143,12 @@ main section.search-filter {
     }
 
     & .boton {
-        background-color: #f6264e;
-        font-family: josefin sans;
-        color: #ffffff;
-        border-radius: 4pt;
-        border-color: #ffffff;
-        font-size: 12pt;
-        padding: 3pt;
+        background-color: map-get($botones, back-color );
+        font: map-get($botones, font );
+        color: map-get($botones, color );
+        border-radius: map-get($botones , radius );
+        border-color: map-get($botones, border );
+        padding: map-get($botones, padding )
     }
 }
 
@@ -193,6 +192,15 @@ main section.productos-img {
             flex-direction: column;
             align-items: center;
         }
+    
+    & input.boton{
+        background-color: map-get($botones, back-color );
+        font: map-get($botones, font );
+        color: map-get($botones, color );
+        border-radius: map-get($botones , radius );
+        border-color: map-get($botones, border );
+        padding: map-get($botones, padding )
+    }
     }
 }
 
