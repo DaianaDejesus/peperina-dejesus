@@ -1,73 +1,83 @@
-$backgroundcolor:(#ffffff9c);
-$fontcolor: (#f6264e);
-$fontlinks:( bold 14pt "Josefin Sans");
-$fonttitle: (600 17pt "Josefin Sans");
-$fontformularios: (15pt "Belleza");
-$fontparrafo: (14pt "Josefin Sans");
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+@import "vars-mixin";
+
+%backcolor {
+    background-color: $backgroundcolor;
+    color: $fontcolor;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    align-items: stretch;
+    padding: 17pt;
 }
 
 body{
     background-size: contain;
     background-image: url(../assets/img/fondo.png);
     background-position: center center;
-    background-attachment: sticky;    
+    background-attachment: sticky;
     width: 100%;
     margin: 0 auto;
     
-    & div.container-fluid{
-    padding: 0;
+    & div.container-fluid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        min-width: 320px;
     }
-
 }
-
-
+    
+    
 /* Comienza nav */
 
-.navbar{
-    & &-brand{
-    margin: 0 0.5rem;
-    width: 50%;
-    animation-delay: 1s;
-    animation: bounce; 
-    animation-duration: 2s;
-            }
-    & &-brand img{
-    width: 30%;
-            }
-    & &-nav .nav-item .nav-link{
-    font: $fontlinks;
-    color: $fontcolor;
-    list-style-type: none;
-    text-align: right;
-            }
-    .nav-link:hover{
-    opacity: 0.5;
-            }
-} 
+.navbar {
+    & &-brand {
+        margin: 0 0.5rem;
+        width: 50%;
+        animation-delay: 1s;
+        animation: bounce;
+        animation-duration: 2s;
+    }
+
+    & &-brand img {
+        width: 30%;
+    }
+
+    & &-nav .nav-item .nav-link {
+        font: $fontlinks;
+        color: $fontcolor;
+        list-style-type: none;
+        text-align: right;
+    }
+
+    .nav-link:hover {
+        opacity: 0.5;
+    }
+}
+
 /* Comienza carrousel del index */
-#carouselExampleFade{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+#carouselExampleFade {
+    display: flex;
+    @include centrado();
     padding: 20px;
     max-width: 1024px;
     margin: auto;
-    img{
-    width: 100%;
-    height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }
+
 /* Comienza productos estrella del index */
-.productos-estrella{
+.productos-estrella {
     display: grid;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
+    @include centrado();
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 15% 85%;
     width: 100%;
@@ -76,42 +86,44 @@ body{
     max-width: 1024px;
     margin: auto;
 
-    h2{
-    background-color: #ffffff;
-    font: $fonttitle;
-    color: $fontcolor;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    padding: 15px;
+    h2 {
+        background-color: #ffffff;
+        font: $fonttitle;
+        color: $fontcolor;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding: 15px;
 
-        &:nth-child(1){
-        grid-column: 1/4;
-        grid-row: 1/2;
-        }    
+        &:nth-child(1) {
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
     }
-    & &-img{
+
+    & &-img {
         display: flex;
-        flex-direction:row;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         gap: 8px;
         width: 98.5%;
 
-    img.zoom{
-    width: 100%;
-    height: auto;
-    transition: transform .2s; 
- 
-        &:hover {
-        transform: scale(1.5); 
+        img.zoom {
+            width: 100%;
+            height: auto;
+            transition: transform .2s;
+
+            &:hover {
+                transform: scale(1.5);
+            }
         }
-    }
     }
 
 }
+
 /* Productos */
-main section.search-filter{
+main section.search-filter {
     font-family: $fontlinks;
     padding: 15px;
     text-align: right;
@@ -120,8 +132,8 @@ main section.search-filter{
     gap: 8pt;
     margin: 0 30pt;
 
-    & h1{
-        font:$fonttitle;
+    & h1 {
+        font: $fonttitle;
         color: $fontcolor;
         text-align: left;
         background-color: #ffffff;
@@ -130,81 +142,74 @@ main section.search-filter{
         padding: 15pt;
     }
 
-    & .boton{
-    background-color: #f6264e;
-    font-family: josefin sans;
-    color: #ffffff;
-    border-radius: 4pt;
-    border-color: #ffffff;
-    font-size: 12pt;
-    padding: 3pt;
+    & .boton {
+        background-color: #f6264e;
+        font-family: josefin sans;
+        color: #ffffff;
+        border-radius: 4pt;
+        border-color: #ffffff;
+        font-size: 12pt;
+        padding: 3pt;
     }
 }
-main section.productos-img{
+
+main section.productos-img {
     display: grid;
-    justify-content: space-around;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
+    @include centrado();
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: auto;
     padding: 30px;
     gap: 8px;
     width: 100%;
     height: auto;
-    & img{
-    display: flex;
-    flex-wrap: wrap;
-    width: 98.5%;
-    height: auto;
+
+    & img {
+        display: flex;
+        flex-wrap: wrap;
+        width: 98.5%;
+        height: auto;
     }
 }
+
 /* Contactos */
-.contactos{
-    background-color: $backgroundcolor;
+.contactos {
+    @extend %backcolor ; 
     margin: 20pt 100pt;
     font-family: $fontformularios;
-    color: $fontcolor;
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
-    align-items:stretch;
-    padding: 17pt;
-    
-    & h1{
-        font:$fonttitle;
-        color:$fontcolor;
+
+    & h1 {
+        font: $fonttitle;
+        color: $fontcolor;
     }
 
-    & div{
-    display: flex;
-    justify-content:center;
-    align-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 5pt;
-    
-        &.comentarios{
+    & div {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include centrado();
+        padding: 10px;
+        gap: 5pt;
+
+        &.comentarios {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
+
 /* Nuestra historia */
 
-main.nuestra-historia{
-        background-color: $backgroundcolor;
-        display: grid;
-        overflow-wrap: nowrap;
-        min-height: 100%;
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin: auto;
-        max-width: 1024px;
+main.nuestra-historia {
+    background-color: $backgroundcolor;
+    display: grid;
+    overflow-wrap: nowrap;
+    min-height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: auto;
+    max-width: 1024px;
 
-    & div.nuestra-historia-img{
+    & div.nuestra-historia-img {
         width: auto;
         max-height: 500px;
         background-size: cover;
@@ -218,7 +223,7 @@ main.nuestra-historia{
         padding: 20px;
     }
 
-    & .nuestra-historia-texto{
+    & .nuestra-historia-texto {
         display: flex;
         flex-direction: column;
         flex-basis: auto;
@@ -227,76 +232,72 @@ main.nuestra-historia{
         padding: 8pt;
         margin-top: 5pt;
 
-        & h1{
+        & h1 {
             font: $fonttitle;
             color: $fontcolor;
         }
-        & p{
+
+        & p {
             font: $fontparrafo;
             color: $fontcolor;
         }
-        & h3{
+
+        & h3 {
             font: $fonttitle;
             color: $fontcolor;
-        } 
+        }
     }
 }
+
 /* Comienza preguntas frecuentes */
-.preguntas{
-    background-color: $backgroundcolor;
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
-    align-items:stretch;
-    padding: 17pt;
-    color: $fontcolor;
-    
-    & section.links-de-preguntas{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items:center;
-    font-weight: 800;
-    text-decoration: none;
-    font: $fontlinks;
+.preguntas {
+    @extend %backcolor ;
+
+    & section.links-de-preguntas {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include centrado();
+        font-weight: 800;
+        text-decoration: none;
+        font: $fontlinks;
+
         & h1 {
             color: $fontcolor;
             font: $fonttitle;
             text-align: center;
         }
-        & a{
+
+        & a {
             text-decoration: none;
             color: $fontcolor;
             padding: 3pt;
             text-align: center;
-            &:hover{
+
+            &:hover {
                 opacity: 0.5;
             }
         }
-        }
-
-    & section.preguntas-frecuentes{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: stretch;
-    max-width: 900px;
-    padding: 60px;
-    margin: auto;
-    font:$fontparrafo;
     }
-}   
+
+    & section.preguntas-frecuentes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include centrado ();
+        max-width: 900px;
+        padding: 60px;
+        margin: auto;
+        font: $fontparrafo;
+    }
+}
+
 /* Comienza Footer */
-footer{
+footer {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include centrado();
     padding: 30px;
     height: auto;
     position: relative;
@@ -306,39 +307,62 @@ footer{
         text-align: center;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    .menu__footer{
+
+    .menu__footer {
         display: flex;
         justify-content: center;
         padding: 3px;
-        & nav ul{
+
+        & nav ul {
             display: flex;
             justify-content: center;
-            align-items:center;    
-            li{ 
-            align-items:center;
-            flex-direction: column;
-            list-style-type:none;
-            margin: 0 3px;
-            width: 100%;
-            max-width: 1024px;
+            align-items: center;
+
+            li {
+                align-items: center;
+                flex-direction: column;
+                list-style-type: none;
+                margin: 0 3px;
+                width: 100%;
+                max-width: 1024px;
             }
-            a{
-            text-decoration:none;
-            font: $fontlinks;
-            color: $fontcolor;
+
+            a {
+                text-decoration: none;
+                font: $fontlinks;
+                color: $fontcolor;
             }
-                & li a:hover{
-                opacity: 0.5;                    
-                }            
+
+            & li a:hover {
+                opacity: 0.5;
+            }
         }
     }
-    & .copy{
-    font-size: x-small;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    align-self:flex-end;
-    justify-self:flex-end;
-    position:sticky ;
-    color: $fontcolor; 
-    font-weight: 600;       
+
+    & .copy {
+        font-size: x-small;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        align-self: flex-end;
+        justify-self: flex-end;
+        position: sticky;
+        color: $fontcolor;
+        font-weight: 600;
+    }
+}
+/* Rrss de footer */
+$redes:(
+    fb:#66d7d1,
+    ig:#f6264e,
+    tienda-nube: #d3bcf6,
+    wsp: #a2edce);
+
+@each $nombre,
+$valor in $redes {
+    .btn-#{$nombre} {
+        fill: $valor;
+
+        &:hover {
+            fill: rgb(242, 242, 86);
+        }
     }
 }

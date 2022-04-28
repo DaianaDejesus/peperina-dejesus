@@ -5,6 +5,23 @@
   padding: 0;
 }
 
+.contactos, .preguntas {
+  background-color: #ffffff9c;
+  color: #f6264e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 600;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 17pt;
+}
+
 body {
   background-size: contain;
   background-image: url(../assets/img/fondo.png);
@@ -15,7 +32,12 @@ body {
 }
 
 body div.container-fluid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   padding: 0;
+  min-width: 320px;
 }
 
 /* Comienza nav */
@@ -53,6 +75,8 @@ body div.container-fluid {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -73,10 +97,11 @@ body div.container-fluid {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: center;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 15% 85%;
@@ -178,11 +203,11 @@ main section.search-filter .boton {
 main section.productos-img {
   display: -ms-grid;
   display: grid;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -207,22 +232,8 @@ main section.productos-img img {
 
 /* Contactos */
 .contactos {
-  background-color: #ffffff9c;
   margin: 20pt 100pt;
   font-family: 15pt "Belleza";
-  color: #f6264e;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-weight: 600;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  padding: 17pt;
 }
 
 .contactos h1 {
@@ -334,23 +345,6 @@ main.nuestra-historia .nuestra-historia-texto h3 {
 }
 
 /* Comienza preguntas frecuentes */
-.preguntas {
-  background-color: #ffffff9c;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-weight: 600;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  padding: 17pt;
-  color: #f6264e;
-}
-
 .preguntas section.links-de-preguntas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,11 +355,11 @@ main.nuestra-historia .nuestra-historia-texto h3 {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -401,14 +395,14 @@ main.nuestra-historia .nuestra-historia-texto h3 {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 900px;
   padding: 60px;
   margin: auto;
@@ -425,9 +419,11 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -498,4 +494,37 @@ footer .copy {
   position: sticky;
   color: #f6264e;
   font-weight: 600;
+}
+
+/* Rrss de footer */
+.btn-fb {
+  fill: #66d7d1;
+}
+
+.btn-fb:hover {
+  fill: #f2f256;
+}
+
+.btn-ig {
+  fill: #f6264e;
+}
+
+.btn-ig:hover {
+  fill: #f2f256;
+}
+
+.btn-tienda-nube {
+  fill: #d3bcf6;
+}
+
+.btn-tienda-nube:hover {
+  fill: #f2f256;
+}
+
+.btn-wsp {
+  fill: #a2edce;
+}
+
+.btn-wsp:hover {
+  fill: #f2f256;
 }

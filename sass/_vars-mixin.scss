@@ -1,0 +1,12 @@
+$backgroundcolor:(#ffffff9c);
+$fontcolor: (#f6264e);
+$fontlinks:(bold 14pt "Josefin Sans");
+$fonttitle: (600 17pt "Josefin Sans");
+$fontformularios: (15pt "Belleza");
+$fontparrafo: (14pt "Josefin Sans");
+
+@mixin centrado {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
