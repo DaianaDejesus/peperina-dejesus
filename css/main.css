@@ -5,6 +5,16 @@
   padding: 0;
 }
 
+@media screen and (max-width: 990px) {
+  .container-fluid {
+    overflow: hidden;
+    width: 100%;
+  }
+  .row {
+    overflow: hidden;
+  }
+}
+
 .contactos, .preguntas {
   background-color: #ffffff9c;
   color: #f6264e;
@@ -37,10 +47,8 @@ body div.container-fluid {
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   padding: 0;
-  min-width: 320px;
 }
 
-/* Comienza nav */
 .navbar .navbar-brand {
   margin: 0 0.5rem;
   width: 50%;
@@ -67,7 +75,6 @@ body div.container-fluid {
   opacity: 0.5;
 }
 
-/* Comienza carrousel del index */
 #carouselExampleFade {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,7 +97,6 @@ body div.container-fluid {
   height: auto;
 }
 
-/* Comienza productos estrella del index */
 .productos-estrella {
   display: -ms-grid;
   display: grid;
@@ -164,7 +170,6 @@ body div.container-fluid {
           transform: scale(1.5);
 }
 
-/* Productos */
 main section.search-filter {
   font-family: bold 14pt "Josefin Sans";
   padding: 15px;
@@ -229,9 +234,7 @@ main section.productos-img img {
   height: auto;
 }
 
-/* Contactos */
 .contactos {
-  margin: 20pt 100pt;
   font-family: 15pt "Belleza";
 }
 
@@ -278,7 +281,6 @@ main section.productos-img img {
   padding: 3pt;
 }
 
-/* Nuestra historia */
 main.nuestra-historia {
   background-color: #ffffff9c;
   display: -ms-grid;
@@ -352,7 +354,6 @@ main.nuestra-historia .nuestra-historia-texto h3 {
   color: #f6264e;
 }
 
-/* Comienza preguntas frecuentes */
 .preguntas section.links-de-preguntas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -417,7 +418,6 @@ main.nuestra-historia .nuestra-historia-texto h3 {
   font: 14pt "Josefin Sans";
 }
 
-/* Comienza Footer */
 footer {
   background-color: #ffffff;
   display: -webkit-box;
@@ -504,7 +504,6 @@ footer .copy {
   font-weight: 600;
 }
 
-/* Rrss de footer */
 .btn-fb {
   fill: #66d7d1;
 }

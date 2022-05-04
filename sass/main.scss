@@ -5,6 +5,7 @@
 }
 
 @import "vars-mixin";
+@import "media";
 
 %backcolor {
     background-color: $backgroundcolor;
@@ -28,13 +29,11 @@ body{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding: 0;
-        min-width: 320px;
     }
 }
     
     
-/* Comienza nav */
-
+// Comienza nav
 .navbar {
     & &-brand {
         margin: 0 0.5rem;
@@ -60,7 +59,7 @@ body{
     }
 }
 
-/* Comienza carrousel del index */
+// Comienza carrousel del index
 #carouselExampleFade {
     display: flex;
     @include centrado();
@@ -74,7 +73,7 @@ body{
     }
 }
 
-/* Comienza productos estrella del index */
+//  Comienza productos estrella del index 
 .productos-estrella {
     display: grid;
     @include centrado();
@@ -122,7 +121,7 @@ body{
 
 }
 
-/* Productos */
+// Productos
 main section.search-filter {
     font-family: $fontlinks;
     padding: 15px;
@@ -170,10 +169,10 @@ main section.productos-img {
     }
 }
 
-/* Contactos */
+// Contactos
 .contactos {
     @extend %backcolor ; 
-    margin: 20pt 100pt;
+    // margin: 20pt 100pt;
     font-family: $fontformularios;
 
     & h1 {
@@ -204,7 +203,7 @@ main section.productos-img {
     }
 }
 
-/* Nuestra historia */
+// Nuestra historia 
 
 main.nuestra-historia {
     background-color: $backgroundcolor;
@@ -257,7 +256,7 @@ main.nuestra-historia {
     }
 }
 
-/* Comienza preguntas frecuentes */
+// Comienza preguntas frecuentes
 .preguntas {
     @extend %backcolor ;
 
@@ -300,7 +299,7 @@ main.nuestra-historia {
     }
 }
 
-/* Comienza Footer */
+// Comienza Footer
 footer {
     background-color: #ffffff;
     display: flex;
@@ -357,7 +356,7 @@ footer {
         font-weight: 600;
     }
 }
-/* Rrss de footer */
+// Rrss de footer
 $redes:(
     fb:#66d7d1,
     ig:#f6264e,
