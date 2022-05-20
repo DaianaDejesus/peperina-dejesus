@@ -24,7 +24,8 @@ main section.search-filter {
         color: map-get($botones, color );
         border-radius: map-get($botones , radius );
         border-color: map-get($botones, border );
-        padding: map-get($botones, padding )
+        padding: map-get($botones, padding );
+        margin-top: 10pt;
     }
 }
 

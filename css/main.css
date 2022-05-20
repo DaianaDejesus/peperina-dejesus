@@ -187,7 +187,8 @@ main section.search-filter .boton {
   color: #ffffff;
   border-radius: 4pt;
   border-color: #ffffff;
-  padding: 3pt;
+  padding: 5pt;
+  margin-top: 10pt;
 }
 
 main section.productos-img {
@@ -261,7 +262,7 @@ main section.productos-img img {
   color: #ffffff;
   border-radius: 4pt;
   border-color: #ffffff;
-  padding: 3pt;
+  padding: 5pt;
 }
 
 main.nuestra-historia {
