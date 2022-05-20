@@ -1,6 +1,3 @@
 # peperina-dejesus.
-                 Mejore el responsive.
-                 Subí la página al servidor https://peperina-dejesus.000webhostapp.com/
-                 Me falta achicar las imagenes y mejorar el mobile.
-            
+  Esta página es acerca de Peperina Hogar, marca de bazar y deco hogareña, en la cual encontrarás en el HOME, los productos mas vendidos e info importante. Luego podrás ver la page de PRODUCTOS, con todos los objetos disponibles. Esperamos conocerte más, y que puedas comunicarte, para ello contas con la pestañada de CONTACTOS, si te quedan dudas podes solucionarla con nuestras PREGUNTAS FRECUENTES. Así como podemos conocerte, queremos que nos conozcas ingresa a NUESTRA HISTORIA.
                  
