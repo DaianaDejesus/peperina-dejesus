@@ -1,3 +1,6 @@
-# peperina-dejesus Agregue sass en todas las pages.
-                   Agregue extend, mixin, map-get, keywords y description.
-                   Mejore el estilo de las distintas pages y sus respectivos responsive.
+# peperina-dejesus.
+                 Mejore el responsive.
+                 Subí la página al servidor https://peperina-dejesus.000webhostapp.com/
+                 Me falta achicar las imagenes y mejorar el mobile.
+            
+                 
