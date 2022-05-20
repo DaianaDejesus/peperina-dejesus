@@ -1,0 +1,52 @@
+// Nuestra historia 
+
+main.nuestra-historia {
+    background-color: $backgroundcolor;
+    display: grid;
+    overflow-wrap: nowrap;
+    min-height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: auto;
+    max-width: 1024px;
+
+    & div.nuestra-historia-img {
+        width: auto;
+        max-height: 500px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        flex-grow: 1;
+        overflow: hidden;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    & .nuestra-historia-texto {
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        flex-grow: 1;
+        align-items: center;
+        padding: 8pt;
+        margin-top: 5pt;
+
+        & h1 {
+            font: $fonttitle;
+            color: $fontcolor;
+        }
+
+        & p {
+            font: $fontparrafo;
+            color: $fontcolor;
+        }
+
+        & h3 {
+            font: $fonttitle;
+            color: $fontcolor;
+        }
+    }
+}

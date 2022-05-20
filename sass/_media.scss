@@ -8,4 +8,31 @@
             overflow: hidden;
             
     }
+  
+    #carouselExampleFade.row.carousel.slide.carousel-fade{
+        padding: 0;
+        padding-top: 8pt;
     }
+    .row.productos-estrella{
+        display: flex;
+        flex-direction: column;
+    }
+    .col.productos-estrella-img{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+    nav ul li a{
+        font: 7pt;
+    }
+    .row.productos-img {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .container.nuestra-historia {
+        display: flex;
+        flex-direction: column;
+    }
+}

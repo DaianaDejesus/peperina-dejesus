@@ -1,0 +1,42 @@
+// Comienza preguntas frecuentes
+.preguntas {
+    @extend %backcolor ;
+
+    & section.links-de-preguntas {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include centrado();
+        font-weight: 800;
+        text-decoration: none;
+        font: $fontlinks;
+
+        & h1 {
+            color: $fontcolor;
+            font: $fonttitle;
+            text-align: center;
+        }
+
+        & a {
+            text-decoration: none;
+            color: $fontcolor;
+            padding: 3pt;
+            text-align: center;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    & section.preguntas-frecuentes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @include centrado ();
+        max-width: 900px;
+        padding: 60px;
+        margin: auto;
+        font: $fontparrafo;
+    }
+}

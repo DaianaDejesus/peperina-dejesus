@@ -1,0 +1,61 @@
+// Comienza carrousel del index
+#carouselExampleFade {
+    display: flex;
+    @include centrado();
+    padding: 20px;
+    max-width: 1024px;
+    margin: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+//  Comienza productos estrella del index 
+.productos-estrella {
+    display: grid;
+    @include centrado();
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15% 85%;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    max-width: 1024px;
+    margin: auto;
+
+    h2 {
+        background-color: #ffffff;
+        font: $fonttitle;
+        color: $fontcolor;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+
+        &:nth-child(1) {
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+    }
+
+    & &-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        width: 98.5%;
+
+        img.zoom {
+            width: 100%;
+            height: auto;
+            transition: transform .2s;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+
+}

@@ -13,66 +13,52 @@
   .row {
     overflow: hidden;
   }
-}
-
-.contactos, .preguntas {
-  background-color: #ffffff9c;
-  color: #f6264e;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-weight: 600;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  padding: 17pt;
-}
-
-body {
-  background-size: contain;
-  background-image: url(../assets/img/fondo.png);
-  background-position: center center;
-  background-attachment: sticky;
-  width: 100%;
-  margin: 0 auto;
-}
-
-body div.container-fluid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
-  padding: 0;
-}
-
-.navbar .navbar-brand {
-  margin: 0 0.5rem;
-  width: 50%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation: bounce;
-          animation: bounce;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-.navbar .navbar-brand img {
-  width: 30%;
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
-  font: bold 14pt "Josefin Sans";
-  color: #f6264e;
-  list-style-type: none;
-  text-align: right;
-}
-
-.navbar .nav-link:hover {
-  opacity: 0.5;
+  #carouselExampleFade.row.carousel.slide.carousel-fade {
+    padding: 0;
+    padding-top: 8pt;
+  }
+  .row.productos-estrella {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .col.productos-estrella-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  nav ul li a {
+    font: 7pt;
+  }
+  .row.productos-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .container.nuestra-historia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #carouselExampleFade {
@@ -121,7 +107,7 @@ body div.container-fluid {
 
 .productos-estrella h2 {
   background-color: #ffffff;
-  font: 600 17pt "Josefin Sans";
+  font: 600 19pt "Josefin Sans";
   color: #f6264e;
   text-align: center;
   width: 100%;
@@ -171,7 +157,7 @@ body div.container-fluid {
 }
 
 main section.search-filter {
-  font-family: bold 14pt "Josefin Sans";
+  font-family: bold 12pt "Josefin Sans";
   padding: 15px;
   text-align: right;
   display: -webkit-box;
@@ -186,7 +172,7 @@ main section.search-filter {
 }
 
 main section.search-filter h1 {
-  font: 600 17pt "Josefin Sans";
+  font: 600 19pt "Josefin Sans";
   color: #f6264e;
   text-align: left;
   background-color: #ffffff;
@@ -217,7 +203,6 @@ main section.productos-img {
           align-items: center;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: auto;
   padding: 30px;
   gap: 8px;
   width: 100%;
@@ -234,16 +219,14 @@ main section.productos-img img {
   height: auto;
 }
 
-.contactos {
-  font-family: 15pt "Belleza";
-}
-
 .contactos h1 {
-  font: 600 17pt "Josefin Sans";
+  font: 600 19pt "Josefin Sans";
   color: #f6264e;
+  margin-left: 25pt;
 }
 
 .contactos div {
+  font-family: 15pt "Belleza";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +323,7 @@ main.nuestra-historia .nuestra-historia-texto {
 }
 
 main.nuestra-historia .nuestra-historia-texto h1 {
-  font: 600 17pt "Josefin Sans";
+  font: 600 19pt "Josefin Sans";
   color: #f6264e;
 }
 
@@ -350,7 +333,7 @@ main.nuestra-historia .nuestra-historia-texto p {
 }
 
 main.nuestra-historia .nuestra-historia-texto h3 {
-  font: 600 17pt "Josefin Sans";
+  font: 600 19pt "Josefin Sans";
   color: #f6264e;
 }
 
@@ -374,12 +357,12 @@ main.nuestra-historia .nuestra-historia-texto h3 {
           align-items: center;
   font-weight: 800;
   text-decoration: none;
-  font: bold 14pt "Josefin Sans";
+  font: bold 12pt "Josefin Sans";
 }
 
 .preguntas section.links-de-preguntas h1 {
   color: #f6264e;
-  font: 600 17pt "Josefin Sans";
+  font: 600 19pt "Josefin Sans";
   text-align: center;
 }
 
@@ -416,6 +399,66 @@ main.nuestra-historia .nuestra-historia-texto h3 {
   padding: 60px;
   margin: auto;
   font: 14pt "Josefin Sans";
+}
+
+.contactos, .preguntas {
+  background-color: #ffffff9c;
+  color: #f6264e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 600;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 17pt 5pt;
+}
+
+body {
+  background-size: contain;
+  background-image: url(../assets/img/fondo.png);
+  background-position: center center;
+  background-attachment: sticky;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body div.container-fluid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  padding: 0;
+}
+
+.navbar .navbar-brand {
+  margin: 0 0.5rem;
+  width: 50%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation: bounce;
+          animation: bounce;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.navbar .navbar-brand img {
+  width: 25%;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  font: bold 12pt "Josefin Sans";
+  color: #f6264e;
+  list-style-type: none;
+  text-align: right;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.5;
 }
 
 footer {
@@ -466,6 +509,7 @@ footer .menu__footer nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 0;
 }
 
 footer .menu__footer nav ul li {
@@ -484,7 +528,7 @@ footer .menu__footer nav ul li {
 
 footer .menu__footer nav ul a {
   text-decoration: none;
-  font: bold 14pt "Josefin Sans";
+  font: bold 12pt "Josefin Sans";
   color: #f6264e;
 }
 

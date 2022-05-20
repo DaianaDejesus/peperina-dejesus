@@ -1,0 +1,33 @@
+// Contactos
+.contactos {
+    @extend %backcolor ; 
+
+    & h1 {
+        font: $fonttitle;
+        color: $fontcolor;
+        margin-left: 25pt;
+    }
+
+    & div {
+        font-family: $fontformularios;
+        display: flex;
+        @include centrado();
+        padding: 10px;
+        gap: 5pt;
+
+        &.comentarios {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+    & input.boton{
+        background-color: map-get($botones, back-color );
+        font: map-get($botones, font );
+        color: map-get($botones, color );
+        border-radius: map-get($botones , radius );
+        border-color: map-get($botones, border );
+        padding: map-get($botones, padding )
+    }
+    }
+}

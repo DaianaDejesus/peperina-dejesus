@@ -6,6 +6,13 @@
 
 @import "vars-mixin";
 @import "media";
+@import "index";
+@import "productos";
+@import "contactos";
+@import "nuestra-historia";
+@import "preguntas-frecuentes";
+
+
 
 %backcolor {
     background-color: $backgroundcolor;
@@ -14,7 +21,7 @@
     flex-direction: column;
     font-weight: 600;
     align-items: stretch;
-    padding: 17pt;
+    padding: 17pt 5pt;
 }
 
 body{
@@ -44,7 +51,7 @@ body{
     }
 
     & &-brand img {
-        width: 30%;
+        width: 25%;
     }
 
     & &-nav .nav-item .nav-link {
@@ -56,246 +63,6 @@ body{
 
     .nav-link:hover {
         opacity: 0.5;
-    }
-}
-
-// Comienza carrousel del index
-#carouselExampleFade {
-    display: flex;
-    @include centrado();
-    padding: 20px;
-    max-width: 1024px;
-    margin: auto;
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-//  Comienza productos estrella del index 
-.productos-estrella {
-    display: grid;
-    @include centrado();
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 15% 85%;
-    width: 100%;
-    height: auto;
-    padding: 15px;
-    max-width: 1024px;
-    margin: auto;
-
-    h2 {
-        background-color: #ffffff;
-        font: $fonttitle;
-        color: $fontcolor;
-        text-align: center;
-        width: 100%;
-        height: auto;
-        padding: 15px;
-
-        &:nth-child(1) {
-            grid-column: 1/4;
-            grid-row: 1/2;
-        }
-    }
-
-    & &-img {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8px;
-        width: 98.5%;
-
-        img.zoom {
-            width: 100%;
-            height: auto;
-            transition: transform .2s;
-
-            &:hover {
-                transform: scale(1.5);
-            }
-        }
-    }
-
-}
-
-// Productos
-main section.search-filter {
-    font-family: $fontlinks;
-    padding: 15px;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    gap: 8pt;
-    margin: 0 30pt;
-
-    & h1 {
-        font: $fonttitle;
-        color: $fontcolor;
-        text-align: left;
-        background-color: #ffffff;
-        width: 100%;
-        height: auto;
-        padding: 15pt;
-    }
-
-    & .boton {
-        background-color: map-get($botones, back-color );
-        font: map-get($botones, font );
-        color: map-get($botones, color );
-        border-radius: map-get($botones , radius );
-        border-color: map-get($botones, border );
-        padding: map-get($botones, padding )
-    }
-}
-
-main section.productos-img {
-    display: grid;
-    @include centrado();
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: auto;
-    padding: 30px;
-    gap: 8px;
-    width: 100%;
-    height: auto;
-
-    & img {
-        display: flex;
-        flex-wrap: wrap;
-        width: 98.5%;
-        height: auto;
-    }
-}
-
-// Contactos
-.contactos {
-    @extend %backcolor ; 
-    // margin: 20pt 100pt;
-    font-family: $fontformularios;
-
-    & h1 {
-        font: $fonttitle;
-        color: $fontcolor;
-    }
-
-    & div {
-        display: flex;
-        @include centrado();
-        padding: 10px;
-        gap: 5pt;
-
-        &.comentarios {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    
-    & input.boton{
-        background-color: map-get($botones, back-color );
-        font: map-get($botones, font );
-        color: map-get($botones, color );
-        border-radius: map-get($botones , radius );
-        border-color: map-get($botones, border );
-        padding: map-get($botones, padding )
-    }
-    }
-}
-
-// Nuestra historia 
-
-main.nuestra-historia {
-    background-color: $backgroundcolor;
-    display: grid;
-    overflow-wrap: nowrap;
-    min-height: 100%;
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: auto;
-    max-width: 1024px;
-
-    & div.nuestra-historia-img {
-        width: auto;
-        max-height: 500px;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        flex-basis: auto;
-        flex-grow: 1;
-        overflow: hidden;
-        align-items: stretch;
-        padding: 20px;
-    }
-
-    & .nuestra-historia-texto {
-        display: flex;
-        flex-direction: column;
-        flex-basis: auto;
-        flex-grow: 1;
-        align-items: center;
-        padding: 8pt;
-        margin-top: 5pt;
-
-        & h1 {
-            font: $fonttitle;
-            color: $fontcolor;
-        }
-
-        & p {
-            font: $fontparrafo;
-            color: $fontcolor;
-        }
-
-        & h3 {
-            font: $fonttitle;
-            color: $fontcolor;
-        }
-    }
-}
-
-// Comienza preguntas frecuentes
-.preguntas {
-    @extend %backcolor ;
-
-    & section.links-de-preguntas {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        @include centrado();
-        font-weight: 800;
-        text-decoration: none;
-        font: $fontlinks;
-
-        & h1 {
-            color: $fontcolor;
-            font: $fonttitle;
-            text-align: center;
-        }
-
-        & a {
-            text-decoration: none;
-            color: $fontcolor;
-            padding: 3pt;
-            text-align: center;
-
-            &:hover {
-                opacity: 0.5;
-            }
-        }
-    }
-
-    & section.preguntas-frecuentes {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        @include centrado ();
-        max-width: 900px;
-        padding: 60px;
-        margin: auto;
-        font: $fontparrafo;
     }
 }
 
@@ -324,6 +91,7 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-left: 0;
 
             li {
                 align-items: center;

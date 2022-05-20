@@ -1,0 +1,46 @@
+// Productos
+main section.search-filter {
+    font-family: $fontlinks;
+    padding: 15px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 8pt;
+    margin: 0 30pt;
+
+    & h1 {
+        font: $fonttitle;
+        color: $fontcolor;
+        text-align: left;
+        background-color: #ffffff;
+        width: 100%;
+        height: auto;
+        padding: 15pt;
+    }
+
+    & .boton {
+        background-color: map-get($botones, back-color );
+        font: map-get($botones, font );
+        color: map-get($botones, color );
+        border-radius: map-get($botones , radius );
+        border-color: map-get($botones, border );
+        padding: map-get($botones, padding )
+    }
+}
+
+main section.productos-img {
+    display: grid;
+    @include centrado();
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+
+    & img {
+        display: flex;
+        flex-wrap: wrap;
+        width: 98.5%;
+        height: auto;
+    }
+}
